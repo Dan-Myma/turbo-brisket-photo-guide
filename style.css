@@ -25,7 +25,8 @@ h3 { font-size: 1.95rem; line-height: 1.03; font-weight: 700; }
 .nav { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .nav a { color: var(--paper); text-decoration: none; }
 .nav a:hover { color: var(--honey); }
-.brand { font-size: 1.28rem; letter-spacing: .085em; font-weight: 800; }
+.brand { display: inline-flex; align-items: center; gap: 12px; padding-block: 7px; font-size: 1.28rem; letter-spacing: .085em; font-weight: 800; }
+.brand-logo { display: block; width: 62px; height: auto; padding: 4px; background: var(--paper); border-radius: 3px; }
 .nav nav { display: flex; gap: clamp(16px, 4vw, 36px); font-size: .91rem; }
 .hero { color: var(--paper); background: var(--dark); padding-block: 48px 61px; }
 .hero-inner { display: grid; grid-template-columns: .8fr 1.28fr; gap: clamp(28px, 5vw, 66px); align-items: center; }
@@ -85,6 +86,8 @@ dialog figcaption { padding: 8px 3px 0; font-size: .9rem; }
   .steps > li::before { top: 22px; font-size: 1.7rem; }
 }
 @media (max-width: 450px) {
+  .brand span { display: none; }
+  .brand-logo { width: 56px; }
   .quick { grid-template-columns: repeat(2, 1fr); }
   .quick > div:nth-child(2) { border-right: 0; }
   .quick > div:nth-child(-n+2) { border-bottom: 1px solid #cfbca3; }
